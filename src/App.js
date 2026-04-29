@@ -71,13 +71,13 @@ const App = () => {
 
   const onPageSelect = (num) => {
     fetchCatalogue(keyword, num);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    setTimeout(scrollToResults, 120);
   };
 
   const onReset = () => {
     setKeyword("");
     fetchCatalogue("", 1);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    setTimeout(scrollToResults, 120);
   };
 
   const onClear = () => {
